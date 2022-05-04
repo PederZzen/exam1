@@ -13,5 +13,5 @@ fetch(url)
 });
 
 function listData (data) {
-    console.log(data.posts.title);
+    console.log(data.posts);
 }
