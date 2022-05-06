@@ -1,18 +1,81 @@
+:root {
+    --bgColor: #F9F9F9;
+    --accentColor: #EDEDED;
+    --textColor1: rgb(22, 22, 22);
+    --textColor2: rgb(73, 73, 73);
+    --textColor3: rgb(231, 231, 231);
+
+    --headingFont: 'Open Sans', 'Helvetica Neue', sans-serif;
+    --paragraphFont: 'Montserrat', sans-serif;;
+}
+
 body {
-    background-color: gray;
+    background-color: var(--bgColor);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* header {
-    background-image: url(/media/index-hero-small.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 90vh;
-} */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--headingFont);
+    color: var(--textColor1)
+}
 
-.carousel__container--card img {
+p,
+a {
+    font-family: var(--paragraphFont);
+    color: var(--textColor1);
+}
+
+a {
+    text-decoration: none;
+}
+
+.image-style {
     width: 100%;
+}
+
+/* Header */
+
+/* Navigation */
+
+.top__nav {
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.top__nav ul {
+    padding: 0;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.top__nav li {
+    color: var(--textColor3);
+    list-style-type: none;
+    margin: 20px;
+}
+
+header {
+    height: 90vh;
+    background-size: cover;
+}
+
+#hero__index {
+    background-image: url(../media/index-hero-small.jpg);
+    background-position: bottom;
+}
+
+.hero__text {
+    position: absolute;
+    right: 50%;
+    bottom: 40%;
+    transform: translate(50%, -50%);
+    width: 65%;
+    min-width: 20rem;
 }
