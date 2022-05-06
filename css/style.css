@@ -1,0 +1,18 @@
+body {
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* header {
+    background-image: url(/media/index-hero-small.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+} */
+
+.carousel__container--card img {
+    width: 100%;
+}
