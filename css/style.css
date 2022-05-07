@@ -21,7 +21,8 @@ h2,
 h3,
 h4 {
     font-family: var(--headingFont);
-    color: var(--textColor1)
+    color: var(--textColor1);
+    font-weight: normal;
 }
 
 p,
@@ -43,28 +44,74 @@ a {
 /* Navigation */
 
 .top__nav {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .75);
     position: absolute;
     top: 0;
     width: 100%;
+    display: none;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+
+#header-shadow {
+    width: 100%;
+    height: 80px;
+    background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, .6));
+    transition: all .5s;
+}
+
+.header-shadow__scroll {
+    background: rgba(0, 0, 0, .75);
+    transition: all .5s;
 }
 
 .top__nav ul {
     padding: 0;
-    margin-top: 5rem;
+    margin: 120px 0 50px;
     text-align: center;
 }
 
 .top__nav li {
     color: var(--textColor3);
     list-style-type: none;
-    margin: 20px;
+    margin: 50px;
+    font-size: 1.5rem;
+}
+
+#logo {
+    width: 11rem;
+    z-index: 2;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#menu-icon {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+}
+
+#menu-icon__close {
+    position: absolute;
+    right: 5;
+    top: 25px;
+    display: none;
+    z-index: 2;
 }
 
 header {
     height: 90vh;
     background-size: cover;
+    position: relative;
 }
+
+/* Hero */
 
 #hero__index {
     background-image: url(../media/index-hero-small.jpg);
@@ -74,8 +121,21 @@ header {
 .hero__text {
     position: absolute;
     right: 50%;
-    bottom: 40%;
+    bottom: 35%;
     transform: translate(50%, -50%);
     width: 65%;
     min-width: 20rem;
+}
+
+/* Index */
+
+#index h1 {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 1.7rem;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
 }

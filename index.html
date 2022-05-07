@@ -9,11 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Helt På Bærtur | Forside</title>
 </head>
-<body>
+<body id="index">
     <header id="hero__index">
         <section class="navbar">
-            <a href="./index.html"><img src="./media/exam1_logo.svg" alt="Helt på bærtur logo"></a>
-            <img src="./media/menu_icon.svg" alt="menu icon">
+            <div id="header-shadow"></div>
+            <a href="./index.html"><img src="./media/exam1_logo.svg" alt="Helt på bærtur logo" id="logo"></a>
+            <img src="./media/menu_icon.svg" alt="menu icon" id="menu-icon">
+            <img src="./media/menu_icon_close.svg" alt="menu icon close" id="menu-icon__close">
             <div class="top__nav">
                 <ul>
                     <a href="./index.html"><li>Heim</li></a>
@@ -29,11 +31,13 @@
     <main>
         <section>
             <h1>Siste Artikler</h1> 
-            <div class="API__output" class="image-style"></div>
+            <button class="carousel__button"></button>
+            <div class="carousel API__output image-style"></div>
+            <button class="carousel__button"></button>
         </section>
 
         <section class="about-me__ad">
-            <p>Hei! I denne skoleoppgaven er jeg en blogger som stadig kommer med gode råd for deg som ønsker å lære mer om naturen og hva den har å by på. Det meste du ser her har jeg tyvet til meg fra diverse lugumbre sider på internett, med unntak av noen bilder jeg faktisk har tatt selv. </p>
+            <p>Hei! I denne skoleoppgaven er jeg en blogger som stadig kommer med gode råd til deg som ønsker å lære mer om naturen og hva den har å by på. Det meste du ser her har jeg tyvet til meg fra diverse lugumbre sider på internett, med unntak av noen bilder jeg faktisk har tatt selv. </p>
             <a href="./about.html">Les om meg her!</a>
         </section>
     </main>
