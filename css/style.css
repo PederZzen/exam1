@@ -135,7 +135,3 @@ header {
     font-size: 1.7rem;
 }
 
-.carousel {
-    display: flex;
-    flex-direction: row;
-}
