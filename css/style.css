@@ -179,18 +179,20 @@ header {
     top: 50%;
     left: 50px;
     transform: translateY(-50%);
-    width: 70%;
-    font-size: 1.2rem;
+    width: 67%;
+    font-size: 1.3rem;
 }
 
 .highlight {
     background-color: rgba(242, 229, 0, .8);
-    line-height: 1.7rem;
+    line-height: 1.9rem;
+    font-family: var(--headingFont);
 }
 
-.about-me-ad__content a {
-    font-size: 1.3rem;
+.about-me-ad__content img {
+    transform: rotate(-2deg);
 }
+
 
 /* Footer */
 
