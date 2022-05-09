@@ -84,9 +84,22 @@ a {
 .top__nav li {
     color: var(--textColor3);
     list-style-type: none;
-    margin: 50px;
+    margin: 100px;
     font-size: 1.5rem;
+    position: relative;
 }
+
+.top__nav li::after {
+    content: '';
+    height: 0.5px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    background-color: var(--bgColor);
+}
+
 
 #logo {
     width: 11rem;
