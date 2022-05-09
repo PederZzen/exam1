@@ -10,25 +10,30 @@
     <title>Helt på Bærtur | Om meg</title>
 </head>
 <body>
-    <header>
+    <header id="hero__contact">
         <section class="navbar">
-            <a href="./index.html"><img src="./media/exam1_logo.svg" alt="Helt på bærtur logo"></a>
-            <img src="./media/menu_icon.svg" alt="menu icon">
+            <div id="header-shadow"></div>
+            <a href="./index.html"><img src="./media/exam1_logo.svg" alt="Helt på bærtur logo" id="logo"></a>
+            <img src="./media/menu_icon.svg" alt="menu icon" id="menu-icon">
+            <img src="./media/menu_icon_close.svg" alt="menu icon close" id="menu-icon__close">
             <div class="top__nav">
                 <ul>
-                    <a href="./index.html"><li>Heim</li></a>
-                    <a href="./blog.html"><li>Blogg</li></a>
-                    <a href="./about.html"><li>Om Meg</li></a>
-                    <a href="./contact.html"><li>Kontakt</li></a>
+                    <li><a href="./index.html">Heim</a></li>
+                    <li><a href="./blog.html">Blogg</a></li>
+                    <li><a href="./about.html">Om Meg</a></li>
+                    <li><a href="./contact.html">Kontakt</a></li>
                 </ul>
             </div>
         </section>
-        <section class="hero"> 
-            <img src="./media/Kontakt.svg" alt="kontakt">
-        </section>
+            <img src="./media/Kontakt.svg" alt="Kontakt tekst" class="hero__text">
     </header>
 
-    <main>
+    <main class="max-width">
+        <ol class="breadcrumbs">
+            <li class="trail"><a href="./index.html">Heim</a></li>
+            <li class="trail">Kontakt</li>
+        </ol>
+
         <form class="contact-form" method="get">
             <div>
                 <span id="nameError">&nbsp;</span></br>
@@ -51,16 +56,16 @@
             </div>
         </form>    
 
-        <img src="./media/contact-img.jpg" alt="En mann som stirrer inn i solnedgangen" class="image-style">
+        <img src="./media/contact-img.jpg" alt="En mann som stirrer inn i solnedgangen" class="image-style contact__picture">
     </main>
 
     <footer>
         <div class="footer__nav">
             <ul>
-                <a href="./index.html"><li>Heim</li></a>
-                <a href="./blog.html"><li>Blogg</li></a>
-                <a href="./about.html"><li>Om Meg</li></a>
-                <a href="./contact.html"><li>Kontakt</li></a>
+                <li><a href="./index.html">Heim</a></li>
+                <li><a href="./blog.html">Blogg</a></li>
+                <li><a href="./about.html">Om Meg</a></li>
+                <li><a href="./contact.html">Kontakt</a></li>
             </ul>
         </div>
     </footer>

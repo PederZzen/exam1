@@ -26,8 +26,15 @@ h4 {
     font-weight: normal;
 }
 
+h1 {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 1.7rem;
+}
+
 p,
-a {
+a,
+li {
     font-family: var(--paragraphFont);
     color: var(--textColor1);
 }
@@ -56,6 +63,7 @@ a {
     display: none;
 }
 
+
 .navbar {
     position: fixed;
     width: 100%;
@@ -81,8 +89,12 @@ a {
     text-align: center;
 }
 
-.top__nav li {
+.top__nav a {
     color: var(--textColor3);
+
+}
+
+.top__nav li {
     list-style-type: none;
     margin: 20px 10px;
     font-size: 1.3rem;
@@ -117,10 +129,43 @@ header {
     position: relative;
 }
 
+/* Breadcrumbs */
+
+.breadcrumbs {
+    padding: 0;
+    font-size: 0.8em;
+}
+
+li.trail{
+    display: inline-block;
+    color: var(--textColor1);
+}
+
+li.trail a::after {
+    display: inline-block;
+    content: "|";
+    font-weight: normal;
+    padding: 0 1px 0 7px;
+}
+
+
 /* Hero */
 
 #hero__index {
     background-image: url(../media/index-hero-small.jpg);
+    background-position: bottom;
+}
+
+#hero__blog {
+    background-image: url(../media/blog-hero-small.jpg);
+}
+
+#hero__about-me {
+    background-image: url(../media/about-me-hero-small.jpg);
+}
+
+#hero__contact {
+    background-image: url(../media/contact-hero-small.jpg);
     background-position: bottom;
 }
 
@@ -129,39 +174,39 @@ header {
     right: 50%;
     bottom: 35%;
     transform: translate(50%, -50%);
-    width: 65%;
+    height: 2.2rem;
     min-width: 20rem;
 }
 
-/* Index */
-
-#index h1 {
-    text-align: center;
-    margin: 50px 0;
-    font-size: 1.7rem;
+#hero__contact .hero__text {
+    bottom: 20%;
 }
 
-.carousel-container {
+/* Index og Blogg*/
+
+.API-output {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     text-align: center;
 }
 
-.carousel-container img {
+.API-output img {
     aspect-ratio: 16/9;
     object-fit: cover;
 }
 
-.carousel-container p {
+.API-output p {
     font-size: .8rem;
     margin: 10px;
 }
 
-.carousel-container h2 {
+.API-output h2 {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
+
+/* Index */
 
 .carousel-button {
     display: none;
@@ -192,6 +237,45 @@ header {
 
 .about-me-ad__content img {
     transform: rotate(-2deg);
+    position: relative;
+    left: -5px;
+}
+
+/* Blogg */
+
+.load-more__btn {
+    display: block;
+    margin: 30px auto;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.load-more__btn:hover {
+    background-color: var(--accentColor);
+}
+
+/* Om meg  */
+
+.about-me__picture,
+.contact__picture {
+    border-radius: 50%;
+    width: 70%;
+    display: block;
+    margin: 40px auto;
+}
+
+#about h1 {
+    text-align: left;
+}
+
+/* Kontakt */
+
+.contact__picture {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
 }
 
 
