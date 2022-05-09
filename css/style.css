@@ -14,6 +14,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    min-width: 350px;
 }
 
 h1,
@@ -37,6 +38,10 @@ a {
 
 .image-style {
     width: 100%;
+}
+
+.max-width {
+    margin: 10px;
 }
 
 /* Header */
@@ -135,3 +140,77 @@ header {
     font-size: 1.7rem;
 }
 
+.carousel-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.carousel-container img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.carousel-container p {
+    font-size: .8rem;
+    margin: 10px;
+}
+
+.carousel-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.carousel-button {
+    display: none;
+}
+
+.about-me-ad {
+    background-image: url(../media/about-me-ad-small.jpg);
+    background-size: cover;
+    background-position: right;
+    height: 25rem;
+    margin-top: 100px;
+}
+
+.about-me-ad__content{
+    position: relative;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    width: 70%;
+    font-size: 1.2rem;
+}
+
+.highlight {
+    background-color: rgba(242, 229, 0, .8);
+    line-height: 1.7rem;
+}
+
+.about-me-ad__content a {
+    font-size: 1.3rem;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--accentColor);
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer li {
+    padding: 5px;
+    width: 200px;
+    margin-bottom: 20px;
+}

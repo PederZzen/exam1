@@ -1,3 +1,5 @@
+// API Fetch - Henter JSON fil fra WP backend og skriver ut til siden 
+
 const url = "https://espenpedersen.no/exam1/wp-json/wp/v2/posts?_embed";
 const output = document.querySelector(".API-output");
 
@@ -25,7 +27,8 @@ fetch(url)
  }
 
 
-//  Hamburger menu
+// -----------------------------------------------------------------------------------
+//  Hamburger menu - Viser meny og endrer ikon
 
 const menuBtn = document.querySelector("#menu-icon");
 const menuBtnClose = document.querySelector("#menu-icon__close");
@@ -43,7 +46,9 @@ menuBtnClose.addEventListener("click", () => {
     menuBtnClose.style.display = "none";
 })
 
-// Scroll effect
+
+// ------------------------------------------------------------------------------------
+// Scroll effect - Endrer bakgrunnsfargen på header for bedre kontrast ved scrolling
 
 window.onscroll = function () { scrollFunction() };
 
@@ -55,3 +60,4 @@ function scrollFunction () {
         headerShadow.classList.remove("header-shadow__scroll");
     }
 }
+
