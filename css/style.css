@@ -91,12 +91,12 @@ a {
 
 .top__nav a {
     color: var(--textColor3);
-
+    padding: 10px;
 }
 
 .top__nav li {
     list-style-type: none;
-    margin: 20px 10px;
+    margin: 40px 10px;
     font-size: 1.3rem;
     position: relative;
 }
