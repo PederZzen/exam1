@@ -102,7 +102,7 @@ a {
 }
 
 #logo {
-    width: 11rem;
+    width: 9rem;
     z-index: 2;
     position: absolute;
     left: 10px;
@@ -111,6 +111,7 @@ a {
 
 #menu-icon {
     position: absolute;
+    width: 2rem;
     right: 10px;
     top: 40px;
 }
