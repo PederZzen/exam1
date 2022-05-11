@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/blogpost.js" defer></script>
+    <script src="./js/script.js" defer></script>
     <meta name="description" content="">
     <title></title>
 </head>
 <body>
-    <header>
+    <header id="hero__blog-post">
         <section class="navbar">
-            <a href="./index.html"><img src="./media/exam1_logo.svg" alt="website logo"></a>
-            <img src="./media/menu_icon.svg" alt="menu icon">
-            <div class="topnav">
+            <div id="header-shadow"></div>
+            <a href="./index.html"><img src="./media/exam1_logo.svg" alt="Helt på bærtur logo" id="logo"></a>
+            <img src="./media/menu_icon.svg" alt="menu icon" id="menu-icon">
+            <img src="./media/menu_icon_close.svg" alt="menu icon close" id="menu-icon__close">
+            <div class="top__nav">
                 <ul>
-                    <a href="./index.html"><li>Heim</li></a>
-                    <a href="./blog.html"><li>Blogg</li></a>
-                    <a href="./about.html"><li>Om Meg</li></a>
-                    <a href="./contact.html"><li>Kontakt</li></a>
+                    <li><a href="./index.html">Heim</a></li>
+                    <li><a href="./blog.html">Blogg</a></li>
+                    <li><a href="./about.html">Om Meg</a></li>
+                    <li><a href="./contact.html">Kontakt</a></li>
                 </ul>
             </div>
         </section>
     </header>
-    <main>
+    <main class="max-width">
+        <ol class="breadcrumbs">
+            <li class="trail"><a href="./index.html">Heim</a></li>
+            <li class="trail"><a href="./blog.html">Blogg</a></li>
+            <li class="trail blogpostTrail"></li>
+        </ol>
         <div class="blogPost"></div>
     </main>
 </body>

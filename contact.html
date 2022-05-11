@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="./js/script.js" defer></script>
+    <script src="./js/contact.js" defer></script>
     <title>Helt på Bærtur | Om meg</title>
 </head>
-<body>
+<body id="contact">
     <header id="hero__contact">
+        <div class="form__banner"></div>
         <section class="navbar">
             <div id="header-shadow"></div>
             <a href="./index.html"><img src="./media/exam1_logo.svg" alt="Helt på bærtur logo" id="logo"></a>
@@ -34,6 +36,8 @@
             <li class="trail">Kontakt</li>
         </ol>
 
+        <h1 id="left-aligned">Kontakt meg!</h1>
+
         <form class="contact-form" method="get">
             <div>
                 <span id="nameError">&nbsp;</span></br>
@@ -44,12 +48,12 @@
                 <input type="text" name="email" id="email" placeholder="Epost">
             </div>
             <div>
-                <span id="addressError">&nbsp;</span></br>
-                <input type="text" name="address" id="address" placeholder="Emne">
+                <span id="subjectError">&nbsp;</span></br>
+                <input type="text" name="subject" id="subject" placeholder="Emne">
             </div>
             <div>
-                <span id="subjectError">&nbsp;</span></br>
-                <input type="text" name="subject" id="subject" placeholder="Melding">
+                <span id="messageError">&nbsp;</span></br>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Melding.."></textarea>
             </div> 
             <div>
                 <input type="submit" value="Send">

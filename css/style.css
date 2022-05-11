@@ -43,13 +43,38 @@ a {
     text-decoration: none;
 }
 
+.max-width {
+    margin: 10px;
+}
+
+#left-aligned {
+    text-align: left;
+}
+
+/* Media */
+
 .image-style {
     width: 100%;
 }
 
-.max-width {
-    margin: 10px;
+figure {
+    margin: 0;
 }
+
+.blogPost img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.about-me__picture,
+.contact__picture {
+    border-radius: 50%;
+    width: 70%;
+    display: block;
+    margin: 40px auto;
+}
+
 
 /* Header */
 
@@ -125,11 +150,6 @@ a {
     z-index: 2;
 }
 
-header {
-    height: 90vh;
-    background-size: cover;
-    position: relative;
-}
 
 /* Breadcrumbs */
 
@@ -153,6 +173,12 @@ li.trail a::after {
 
 /* Hero */
 
+header {
+    height: 90vh;
+    background-size: cover;
+    position: relative;
+}
+
 #hero__index {
     background-image: url(../media/index-hero-small.jpg);
     background-position: bottom;
@@ -169,6 +195,11 @@ li.trail a::after {
 #hero__contact {
     background-image: url(../media/contact-hero-small.jpg);
     background-position: bottom;
+}
+
+#hero__blog-post {
+    background-position: center;
+    height: 60vh;
 }
 
 .hero__text {
@@ -258,28 +289,65 @@ li.trail a::after {
     background-color: var(--accentColor);
 }
 
-/* Om meg  */
-
-.about-me__picture,
-.contact__picture {
-    border-radius: 50%;
-    width: 70%;
-    display: block;
-    margin: 40px auto;
-}
-
-#about h1 {
-    text-align: left;
-}
-
 /* Kontakt */
 
-.contact__picture {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 400px;
 }
 
+.contact__picture {
+    max-width: 400px;
+}
+
+input[type=text],
+textarea {
+    width: 100%;
+    height: 30px;
+    padding-left: 5px;
+    font-family: var(--paragraphFont);
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+input[type=submit] {
+    margin-top: 20px;
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    background-color: rgb(103, 103, 103);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Blogpost */
+
+.blogPost h1 {
+    margin-bottom: 0;
+}
+
+.blogpost h2,
+.blogpost h3,
+.blogpost h4 {
+    font-weight: bold;
+}
+
+#blogContent {
+    margin-top: 50px;
+}
+
+.blogPost ul,
+.blogpost ol {
+    padding: 0 20px;
+    line-height: 1.5rem;
+}
 
 /* Footer */
 
