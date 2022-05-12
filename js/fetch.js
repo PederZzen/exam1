@@ -24,5 +24,4 @@ fetch(url)
             </div>
         </a>` 
     }
-
  }

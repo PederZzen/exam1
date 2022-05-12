@@ -51,6 +51,12 @@ a {
     text-align: left;
 }
 
+#loading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /* Media */
 
 .image-style {
