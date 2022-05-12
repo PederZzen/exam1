@@ -1,4 +1,5 @@
-const container = document.querySelector(".carousel-container");
-const cards = Array.from(container.children);
+// const container = document.querySelector(".carousel-container");
+// const cards = Array.from(container.children);
 
-console.log(container);
+// console.log(container);
+

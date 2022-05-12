@@ -7,13 +7,14 @@ fetch(url)
  .then(response => response.json())
  .then(posts => {
      listData(posts);
-     console.log(posts);
+     console.log(posts)
+     carouselFunction();
  })
  .catch(error => console.error("Error: " + error))
  .finally(document.getElementById("loading").style.display = "none");
 
 
- function listData(posts) {
+function listData(posts) {
     output.innerHTML = "";
 
     for (let i = 0; i < posts.length; i++) {
@@ -23,12 +24,24 @@ fetch(url)
             if(i === 6) { break }
         }
         output.innerHTML += `
-        <a href="./blogpost.html?id=${posts[i].id}">
-            <div class="API-output__card">
+        <a href="./blogpost.html?id=${posts[i].id}" class="API-output__card">
+            <div>
                 <img src="${posts[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="${posts[i]._embedded['wp:featuredmedia']['0'].alt_text}" class="image-style">
                 <p>${posts[i].date}</p>
                 <h2>${posts[i].title.rendered}</h2>
             </div>
         </a>` 
     }
- }
+}
+
+let carouselFunction = () => {
+    const container = document.querySelector(".carousel-container");
+    const rightBtn = document.querySelector(".carousel-button__right");
+    const leftBtn = document.querySelector(".carousel-button__left");
+
+    rightBtn.addEventListener("click", e => {
+
+    })
+}
+
+
