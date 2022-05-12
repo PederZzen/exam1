@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
     <script src="./js/fetch.js" defer></script>
+    <script src="./js/carousel.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Helt På Bærtur | Forside</title>
 </head>
@@ -31,11 +32,18 @@
     <main>
         <section class="max-width">
             <h1>Siste Artikler</h1> 
-            <button class="carousel-button carousel-button__left"></button>
-            <div class="carousel-container API-output image-style">
-                <img src="./media/loading-gif.gif" id="loading" alt="loading">
+            <img src="./media/loading-gif.gif" id="loading" alt="loading">
+            <div class="carousel">
+                <button class="carousel-button carousel-button__left">
+                    <img src="./media/left-arrow.svg" alt="left arrow">
+                </button>
+                <div class="carousel-wrapper">
+                    <div class="carousel-container API-output image-style"></div>
+                </div>
+                <button class="carousel-button carousel-button__right">
+                    <img src="./media/right-arrow.svg" alt="right arrow">
+                </button>
             </div>
-            <button class="carousel-button carousel-button__right"></button>
         </section>
 
         <section>

@@ -223,15 +223,61 @@ header {
 
 /* Index og Blogg*/
 
-.API-output {
+/* .API-output {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     text-align: center;
+} */
+
+.carousel {
+    position: relative;
+    width: 330px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-wrapper {
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 1rem;
+    transition: all 1s ease-in-out;
+    transform: translateX(-100%);
+}
+
+.carousel-container img {
+    width: 150px;
+}
+
+.carousel-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+}
+
+.carousel-button__left {
+    right: 30px;
+    top: -40px;
+}
+.carousel-button__right {
+    right: 10px;
+    top: -40px;
+}
+
+
+.carousel-button img{
+    height: 15px;
 }
 
 .API-output img {
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/9; /*Internet explorer!!*/
+    /* height: 30%; */
     object-fit: cover;
 }
 
@@ -246,10 +292,6 @@ header {
 }
 
 /* Index */
-
-.carousel-button {
-    display: none;
-}
 
 .about-me-ad {
     background-image: url(../media/about-me-ad-small.jpg);
@@ -280,11 +322,15 @@ header {
     left: -5px;
 }
 
+/* Carousel */
+
+
+
 /* Blogg */
 
 .load-more__btn {
     display: block;
-    margin: 30px auto;
+    margin: 100px auto;
     padding: 5px 10px;
     background-color: transparent;
     border: 1px solid black;

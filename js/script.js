@@ -31,4 +31,3 @@ function scrollFunction () {
         headerShadow.classList.remove("header-shadow__scroll");
     }
 }
-

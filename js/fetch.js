@@ -9,18 +9,25 @@ fetch(url)
      listData(posts);
      console.log(posts);
  })
- .catch(error => console.error("Error: " + error));
+ .catch(error => console.error("Error: " + error))
+ .finally(document.getElementById("loading").style.display = "none");
+
 
  function listData(posts) {
     output.innerHTML = "";
 
-    for (let post of posts) {
+    for (let i = 0; i < posts.length; i++) {
+
+        // Laster inn alle poster for bloggsiden, men bare de seks nyeste på framsiden 
+        if(!document.querySelector(".loadAllPosts")) {
+            if(i === 6) { break }
+        }
         output.innerHTML += `
-        <a href="./blogpost.html?id=${post.id}">
+        <a href="./blogpost.html?id=${posts[i].id}">
             <div class="API-output__card">
-                <img src="${post._embedded['wp:featuredmedia']['0'].source_url}" alt="${post._embedded['wp:featuredmedia']['0'].alt_text}" class="image-style">
-                <p>${post.date}</p>
-                <h2>${post.title.rendered}</h2>
+                <img src="${posts[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="${posts[i]._embedded['wp:featuredmedia']['0'].alt_text}" class="image-style">
+                <p>${posts[i].date}</p>
+                <h2>${posts[i].title.rendered}</h2>
             </div>
         </a>` 
     }

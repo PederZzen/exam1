@@ -26,6 +26,4 @@ fetch(url)
     <h1 id="left-aligned">${data.title.rendered}</h1>
     <p>${data.date}</p>
     <p id=blogContent>${data.content.rendered}</p>`
-
-
- }
+}
