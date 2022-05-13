@@ -24,23 +24,47 @@ function listData(posts) {
             if(i === 6) { break }
         }
         output.innerHTML += `
-        <a href="./blogpost.html?id=${posts[i].id}" class="API-output__card">
-            <div>
+        <div class="API-output__card">
+            <a href="./blogpost.html?id=${posts[i].id}">
                 <img src="${posts[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="${posts[i]._embedded['wp:featuredmedia']['0'].alt_text}" class="image-style">
                 <p>${posts[i].date}</p>
                 <h2>${posts[i].title.rendered}</h2>
-            </div>
-        </a>` 
+            </a>
+        </div>` 
     }
 }
 
 let carouselFunction = () => {
-    const container = document.querySelector(".carousel-container");
-    const rightBtn = document.querySelector(".carousel-button__right");
-    const leftBtn = document.querySelector(".carousel-button__left");
+    let slideIndex = 1;
+    showsSlides(slideIndex);
 
-    rightBtn.addEventListener("click", e => {
+    function plusSlides(n) {
+        showsSlides(slideIndex += n);
+    }
 
+    function showsSlides(n) {
+        let slides = document.querySelectorAll(".API-output__card");
+        let currentCard = slides[slideIndex - 1];
+        let nextCard = slides[slideIndex];
+
+        if (n > slides.length - 1) { slideIndex = 1 };
+        if (n < 1) {slideIndex = slides.length - 1};
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex].style.display = "block";
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+   let rightBtn = document.querySelector(".carousel-button__right");
+   rightBtn.addEventListener("click", () => {
+        plusSlides(1);
+    })
+
+   let leftBtn = document.querySelector(".carousel-button__left");
+   leftBtn.addEventListener("click", () => {
+       plusSlides(-1);
     })
 }
 

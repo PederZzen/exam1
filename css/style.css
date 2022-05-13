@@ -232,7 +232,6 @@ header {
 
 .API-output img {
     aspect-ratio: 16/9; /*Internet explorer!!*/
-    /* height: 30%; */
     object-fit: cover;
 }
 
@@ -281,30 +280,19 @@ header {
 
 .carousel {
     position: relative;
-    width: 330px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.carousel h2 {
-    font-size: 1rem;
-}
-
-.carousel-wrapper {
-    display: flex;
-    gap: 1rem;
-    overflow: hidden;
+    max-width: 500px;
+    margin: auto;
 }
 
 .carousel-container {
+    position: relative;
     display: flex;
-    gap: 1rem;
-    transition: all 1s ease-in-out;
-    /* transform: translateX(-100%); */
+    gap: 10px;
 }
 
-.carousel-container img {
-    width: 150px;
+.API-output__card {
+    display: none;
+    width: 100%;
 }
 
 .carousel-button {
