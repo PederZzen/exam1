@@ -8,7 +8,7 @@ fetch(url)
  .then(posts => {
      listData(posts);
      console.log(posts)
-     carouselFunction();
+     enableCarousel();
  })
  .catch(error => console.error("Error: " + error))
  .finally(document.getElementById("loading").style.display = "none");
@@ -34,38 +34,39 @@ function listData(posts) {
     }
 }
 
-let carouselFunction = () => {
-    let slideIndex = 1;
-    showsSlides(slideIndex);
+let enableCarousel = () => {
+    let rightBtn = document.querySelector(".carousel-button__right");
+    let leftBtn = document.querySelector(".carousel-button__left");
+    let nextCardIndex = 1;
 
-    function plusSlides(n) {
-        showsSlides(slideIndex += n);
+    function changeCard(i) {
+        carousel(nextCardIndex += i);
     }
 
-    function showsSlides(n) {
-        let slides = document.querySelectorAll(".API-output__card");
-        let currentCard = slides[slideIndex - 1];
-        let nextCard = slides[slideIndex];
+    rightBtn.addEventListener("click", () => changeCard(1))
+    leftBtn.addEventListener("click", () => changeCard(-1))
+    
+    carousel(nextCardIndex);
 
-        if (n > slides.length - 1) { slideIndex = 1 };
-        if (n < 1) {slideIndex = slides.length - 1};
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+    function carousel() {
+        let cards = document.querySelectorAll(".API-output__card");
+
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].style.display = "none";
         }
 
-        slides[slideIndex].style.display = "block";
-        slides[slideIndex - 1].style.display = "block";
+        cards[nextCardIndex].style.display = "block";
+        cards[nextCardIndex - 1].style.display = "block";
+
+        if (nextCardIndex === 5) {
+            rightBtn.style.display = "none";
+        } else if (nextCardIndex === 1) {
+            leftBtn.style.display = "none";
+        } else {
+            rightBtn.style.display ="block";
+            leftBtn.style.display ="block";
+        }
     }
-
-   let rightBtn = document.querySelector(".carousel-button__right");
-   rightBtn.addEventListener("click", () => {
-        plusSlides(1);
-    })
-
-   let leftBtn = document.querySelector(".carousel-button__left");
-   leftBtn.addEventListener("click", () => {
-       plusSlides(-1);
-    })
 }
 
 
