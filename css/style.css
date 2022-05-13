@@ -180,7 +180,7 @@ li.trail a::after {
 /* Hero */
 
 header {
-    height: 90vh;
+    height: 70vh;
     background-size: cover;
     position: relative;
 }
@@ -307,6 +307,7 @@ header {
     padding: 0;
     position: absolute;
     top: -40px;
+    cursor: pointer;
 }
 
 .carousel-button__right {
