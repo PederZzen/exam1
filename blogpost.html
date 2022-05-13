@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/blogpost.js" defer></script>
     <script src="./js/script.js" defer></script>
+    <script src="./js/carousel.js" defer></script>
     <meta name="description" content="">
     <title></title>
 </head>
@@ -26,13 +27,41 @@
             </div>
         </section>
     </header>
+
     <main class="max-width">
         <ol class="breadcrumbs">
             <li class="trail"><a href="./index.html">Heim</a></li>
             <li class="trail"><a href="./blog.html">Blogg</a></li>
             <li class="trail blogpostTrail"></li>
         </ol>
+
         <div class="blogPost"></div>
+
+        <section class="carousel-wrapper__post">
+            <h2>Siste Artikler</h2> 
+            <img src="./media/loading-gif.gif" id="loading" alt="loading">
+
+            <div class="carousel">
+                <button class="carousel-button carousel-button__left">
+                    <img src="./media/left-arrow.svg" alt="left arrow">
+                </button>
+                <div class="carousel-container thumbnail"></div>
+                <button class="carousel-button carousel-button__right">
+                    <img src="./media/right-arrow.svg" alt="right arrow">
+                </button>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="footer__nav">
+            <ul>
+                <li><a href="./index.html">Heim</a></li>
+                <li><a href="./blog.html">Blogg</a></li>
+                <li><a href="./about.html">Om Meg</a></li>
+                <li><a href="./contact.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

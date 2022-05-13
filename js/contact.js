@@ -31,11 +31,11 @@ let validateForm = (e) => {
 
     if (enteredName == "") {
         console.error("Name cannot be empty");
-        nameError.innerHTML = "Name cannot be empty"
+        nameError.innerHTML = "* Name cannot be empty"
         validName = false;
     } else if (enteredName.length <= 5 && enteredName.length >= 1) {
         console.error("Name must be more than 5 characters long");
-        nameError.innerHTML = "Name must be more than 5 characters long";
+        nameError.innerHTML = "* Name must be more than 5 characters long";
         validName = false;
     }
 
@@ -48,11 +48,11 @@ let validateForm = (e) => {
 
     if (enteredEmail == "") {
         console.error("Email not entered");
-        emailError.innerHTML = "Please enter your email";
+        emailError.innerHTML = "* Please enter your email";
         validEmail = false;
     } else if (!emailPattern.test(enteredEmail)) {
         console.error("Email not valid");
-        emailError.innerHTML = "Email not valid";
+        emailError.innerHTML = "* Email not valid";
         validEmail = false;
     }
 
@@ -63,11 +63,11 @@ let validateForm = (e) => {
 
     if (enteredSubject == "") {
         console.error("Subject not entered");
-        subjectError.innerHTML = "Please enter subject";
+        subjectError.innerHTML = "* Please enter subject";
         validSubject = false;
     } else if (enteredSubject.length <= 15 && enteredSubject.length >= 1) {
         console.error("Subject should be more than 15 characters long");
-        subjectError.innerHTML = "Subject should be more than 15 characters long"
+        subjectError.innerHTML = "* Subject should be more than 15 characters long"
         validSubject = false;
     }
 
@@ -78,11 +78,11 @@ let validateForm = (e) => {
 
     if (enteredMessage == "") {
         console.error("Message not entered");
-        messageError.innerHTML = "Please enter message";
+        messageError.innerHTML = "* Please enter message";
         validMessage = false;
     } else if (enteredMessage.length <= 25 && enteredMessage.length >= 1) {
         console.error("Message should be more than 25 characters long");
-        messageError.innerHTML = "Message should be more than 25 characters long"
+        messageError.innerHTML = "* Message should be more than 25 characters long"
         validMessage = false;
     }
 

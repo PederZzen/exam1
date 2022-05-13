@@ -26,7 +26,8 @@ h4 {
     font-weight: normal;
 }
 
-h1 {
+h1,
+.carousel-wrapper__post h2 {
     text-align: center;
     margin: 50px 0;
     font-size: 1.7rem;
@@ -52,7 +53,7 @@ a {
 }
 
 #loading {
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -87,11 +88,12 @@ figure {
 /* Navigation */
 
 .top__nav {
-    background-color: rgba(0, 0, 0, .75);
+    background-color: rgba(0, 0, 0, .85);
     position: absolute;
     top: 0;
     width: 100%;
-    display: none;
+    transform: translateY(-100%);
+    transition: all .5s ease-in-out;
 }
 
 
@@ -105,7 +107,7 @@ figure {
 #header-shadow {
     width: 100%;
     height: 80px;
-    background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, .6));
+    background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, .8));
     transition: all .5s;
 }
 
@@ -205,7 +207,6 @@ header {
 
 #hero__blog-post {
     background-position: center;
-    height: 60vh;
 }
 
 .hero__text {
@@ -223,26 +224,23 @@ header {
 
 /* Index og Blogg*/
 
-/* .API-output {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+.thumbnail {
     text-align: center;
-} */
+}
 
-.API-output img {
+.thumbnail img {
     aspect-ratio: 16/9; /*Internet explorer!!*/
     object-fit: cover;
 }
 
-.API-output p {
+.thumbnail p {
     font-size: .8rem;
     margin: 10px;
 }
 
-.API-output h2 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.thumbnail h2 {
+    font-size: 1.1rem;
+    margin: 0;
 }
 
 /* Index */
@@ -282,7 +280,6 @@ header {
     position: relative;
     max-width: 500px;
     margin: auto;
-    text-align: center;
 }
 
 .carousel-container {
@@ -291,12 +288,7 @@ header {
     gap: 10px;
 }
 
-.carousel-container h2 {
-    font-size: 1.1rem;
-    margin: 0;
-}
-
-.API-output__card {
+.carousel__card {
     display: none;
     width: 100%;
 }
@@ -325,9 +317,19 @@ header {
 
 /* Blogg */
 
+.thumbnail__blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.blog__card {
+    margin-bottom: 2rem;
+}
+
 .load-more__btn {
     display: block;
-    margin: 100px auto;
+    margin: 40px auto;
     padding: 5px 10px;
     background-color: transparent;
     border: 1px solid black;
@@ -403,6 +405,16 @@ input[type=submit] {
 .blogpost ol {
     padding: 0 20px;
     line-height: 1.5rem;
+}
+
+.carousel-wrapper__post {
+    background-color: var(--accentColor);
+    padding: 2rem 0;
+    margin: 5rem 0;
+}
+
+.carousel-wrapper__post h2 {
+    margin: 0 0 2rem 0;
 }
 
 /* Footer */

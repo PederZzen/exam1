@@ -2,18 +2,18 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
-const url = "https://espenpedersen.no/exam1/wp-json/wp/v2/posts/" + id + "?_embed";
+const detailsURL = "https://espenpedersen.no/exam1/wp-json/wp/v2/posts/" + id + "?_embed";
 const out = document.querySelector(".blogPost");
 
-fetch(url)
+fetch(detailsURL)
  .then(response => response.json())
  .then(data => {
      console.log(data);
-     listData(data);
+     listDetails(data);
  })
  .catch(error => console.error("Error: " + error));
 
- let listData = (data) => {
+ let listDetails = (data) => {
     const hero = document.querySelector("#hero__blog-post");
     const blogpostTrail = document.querySelector(".blogpostTrail");
 
