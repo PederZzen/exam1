@@ -23,11 +23,16 @@ function listData(posts) {
         if(!document.querySelector(".loadAllPosts")) {
             if(i === 6) { break }
         }
+    
+        let date = new Date(posts[i].date);
+        let localDate = date.toLocaleString("default", {day: "numeric", month: "short", year: "numeric"});
+        // console.log(localDate);
+
         output.innerHTML += `
         <div class="API-output__card">
             <a href="./blogpost.html?id=${posts[i].id}">
                 <img src="${posts[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="${posts[i]._embedded['wp:featuredmedia']['0'].alt_text}" class="image-style">
-                <p>${posts[i].date}</p>
+                <p>${localDate}</p>
                 <h2>${posts[i].title.rendered}</h2>
             </a>
         </div>` 
@@ -37,6 +42,7 @@ function listData(posts) {
 let enableCarousel = () => {
     let rightBtn = document.querySelector(".carousel-button__right");
     let leftBtn = document.querySelector(".carousel-button__left");
+    let cards = document.querySelectorAll(".API-output__card");
     let nextCardIndex = 1;
 
     function changeCard(i) {
@@ -49,8 +55,6 @@ let enableCarousel = () => {
     carousel(nextCardIndex);
 
     function carousel() {
-        let cards = document.querySelectorAll(".API-output__card");
-
         for (let i = 0; i < cards.length; i++) {
             cards[i].style.display = "none";
         }
