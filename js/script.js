@@ -4,17 +4,15 @@
 const menuBtn = document.querySelector("#menu-icon");
 const menuBtnClose = document.querySelector("#menu-icon__close");
 const menu = document.querySelector(".top__nav");
-const body = document.querySelector("body");
 
 menuBtn.addEventListener("click", () => {
-    menu.style.transform = "translateY(0)";
+    menu.classList.add("show-menu");
     menuBtn.style.display = "none";
     menuBtnClose.style.display = "block";
 })
 
 menuBtnClose.addEventListener("click", () => {
-    body.classList.remove("show_menu");
-    menu.style.transform = "translateY(-100%)";
+    menu.classList.remove("show-menu");
     menuBtn.style.display = "block";
     menuBtnClose.style.display = "none";
 })

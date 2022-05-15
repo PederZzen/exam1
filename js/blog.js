@@ -24,7 +24,6 @@ function listData(posts) {
         // console.log(localDate);
 
         let featuredImage = posts[i]._embedded['wp:featuredmedia']['0'];
-        let test = "../media/about-me-ad-small.jpg"
 
         output.innerHTML += `
         <div class="blog__card">
@@ -34,6 +33,11 @@ function listData(posts) {
                 <h2>${posts[i].title.rendered ? posts[i].title.rendered : "'Title not found'"}</h2>
             </a>
         </div>` 
+
+    }
+
+    if (posts.length < 10) {
+        loadMoreBtn.style.display = "none";
     }
 }
 

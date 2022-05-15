@@ -93,22 +93,29 @@ figure {
     top: 0;
     width: 100%;
     transform: translateY(-100%);
-    transition: all .5s ease-in-out;
 }
 
+.show-menu {
+    transform: translateY(0);
+}
 
 .navbar {
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
+.navbar .max-width {
+    margin: 0;
+}
 
 #header-shadow {
     width: 100%;
     height: 80px;
-    background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, .8));
+    background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, .9));
     transition: all .5s;
+    position: fixed;
+    z-index: 1;
 }
 
 .header-shadow__scroll {
@@ -124,7 +131,7 @@ figure {
 
 .top__nav a {
     color: var(--textColor3);
-    padding: 10px;
+    margin: 10px;
 }
 
 .top__nav li {
@@ -132,7 +139,7 @@ figure {
     margin: 40px 10px;
     font-size: 1.3rem;
     position: relative;
-}
+} 
 
 #logo {
     width: 9rem;
@@ -156,8 +163,7 @@ figure {
     top: 25px;
     display: none;
     z-index: 2;
-}
-
+} 
 
 /* Breadcrumbs */
 
@@ -193,7 +199,7 @@ header {
 }
 
 #hero__blog {
-    background-image: url(../media/blog-hero-small.jpg);
+    background: url(../media/blog-hero-small.jpg) center;
 }
 
 #hero__about-me {
@@ -201,8 +207,8 @@ header {
 }
 
 #hero__contact {
-    background-image: url(../media/contact-hero-small.jpg);
-    background-position: bottom;
+    background: url(../media/pexels-sagui-andrea-618848.jpg) 40% 40%;
+    background-size: cover;
 }
 
 #hero__blog-post {
@@ -218,11 +224,7 @@ header {
     min-width: 20rem;
 }
 
-#hero__contact .hero__text {
-    bottom: 20%;
-}
-
-/* Index og Blogg*/
+/* Index & blog */
 
 .thumbnail {
     text-align: center;
@@ -246,14 +248,17 @@ header {
 /* Index */
 
 .about-me-ad {
-    background-image: url(../media/about-me-ad-small.jpg);
+    background: url(../media/about-me-ad-small.jpg) right;
     background-size: cover;
-    background-position: right;
-    height: 25rem;
+    height: 60vh;
     margin-top: 100px;
 }
 
-.about-me-ad__content{
+.about-me-ad .max-width {
+    height: 60vh;
+}
+
+.about-me-ad__content {
     position: relative;
     top: 50%;
     left: 50px;
@@ -315,7 +320,7 @@ header {
     height: 18px;
 }
 
-/* Blogg */
+/* Blog */
 
 .thumbnail__blog {
     display: grid;
@@ -340,7 +345,7 @@ header {
     background-color: var(--accentColor);
 }
 
-/* Kontakt */
+/* Contact */
 
 .contact-form {
     display: flex;
@@ -423,11 +428,24 @@ footer {
     background-color: var(--accentColor);
     padding: 40px 0;
     margin-top: 40px;
+    text-align: center;
+}
+
+footer * {
+    padding: 15px 0;
+}
+
+#footer__logo {
+    width: 10rem;
+}
+
+.social img {
+    width: 2rem;
+    padding: 0 .5rem;
 }
 
 footer ul {
     list-style-type: none;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -438,4 +456,143 @@ footer li {
     padding: 5px;
     width: 200px;
     margin-bottom: 20px;
+}
+
+
+
+
+/* Desktop */
+
+@media only screen and (min-width: 700px) {
+
+    /* Navigation */
+
+    .top__nav {
+        transform: translateY(0);
+        background: transparent;
+    }
+
+    .navbar .max-width {
+        margin: 0 auto;
+    }
+
+    #menu-icon {
+        display: none !important;
+    }
+
+    #menu-icon__close {
+        display: none !important;
+    }
+
+    .top__nav ul {
+        display: flex;
+        position: absolute;
+        margin: 0;
+        top: -10px;
+        right: 0;
+    }
+
+    .top__nav a {
+        font-size: 1rem;
+    }
+
+    #active {
+        color: rgb(214, 191, 149);
+    }
+
+    /* Hero */
+
+    header {
+        height: 80vh;
+    }
+
+    #hero__index {
+        background-image: url(../media/index-hero-big.jpg);
+        background-position: 0 65%;
+    }
+
+    .max-width {
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    /* Index */
+
+    #index h1 {
+        font-size: 1.4rem;
+        margin-bottom: 5rem;
+    }
+
+    .about-me-ad {
+        background-image: url(../media/about-me-ad-big.jpg);
+        background-position: 0 20%;
+        height: 70vh;
+    }
+
+    .about-me-ad .max-width {
+        height: 70vh;
+    }
+
+    .about-me-ad__content {
+        left: 10px;
+        max-width: 600px;
+    }
+
+    /* Carousel */
+
+    .carousel {
+        max-width: 800px;
+        padding: 0 10px;
+    }
+
+    .carousel-button__right {
+        right: 10px;
+    }
+
+    .carousel-button__left {
+        right: 30px;
+    }
+
+    /* Blog */
+
+    #hero__blog {
+        background: url(../media/blog-hero-big.jpg) 0 60%;
+        background-size: cover;
+    }
+
+    .thumbnail__blog {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* About */
+
+    #hero__about-me {
+        background: url(../media/about-me-hero-big.jpg) 0 57%;
+        background-size: cover;
+    }
+
+    .about-me__content {
+        display: grid;
+        grid-template-columns: 60% auto;
+    }
+
+    .about-me__content div {
+        max-width: 600px;
+    }
+
+    /* Contact */
+
+    #hero__contact {
+        background: url(../media/pexels-sagui-andrea-618848.jpg) 0 75%;
+        background-size: cover;
+    }
+
+    /* Footer */
+
+    footer ul {
+        flex-direction: row;
+        width: 600px;
+        margin: 0 auto;
+    }
 }

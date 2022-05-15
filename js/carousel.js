@@ -32,14 +32,21 @@ function listData(posts) {
     }
 }
 
+const mediaQuery = window.matchMedia("(min-width: 700px)");
+
 let enableCarousel = () => {
     let rightBtn = document.querySelector(".carousel-button__right");
     let leftBtn = document.querySelector(".carousel-button__left");
     let cards = document.querySelectorAll(".carousel__card");
     let nextCardIndex = 1;
 
+    if(mediaQuery.matches) {
+        nextCardIndex = 2;
+    }
+
     function changeCard(i) {
         carousel(nextCardIndex += i);
+        console.log(nextCardIndex);
     }
 
     rightBtn.addEventListener("click", () => changeCard(1))
@@ -48,6 +55,8 @@ let enableCarousel = () => {
     carousel(nextCardIndex);
 
     function carousel() {
+        let maxCards = 5;
+
         for (let i = 0; i < cards.length; i++) {
             cards[i].style.display = "none";
         }
@@ -55,14 +64,22 @@ let enableCarousel = () => {
         cards[nextCardIndex].style.display = "block";
         cards[nextCardIndex - 1].style.display = "block";
 
-        if (nextCardIndex === 5) {
+        if (mediaQuery.matches) {
+            cards[nextCardIndex + 1].style.display = "block";
+            maxCards = 4;
+        } 
+        
+
+        if (nextCardIndex === maxCards) {
             rightBtn.style.display = "none";
         } else if (nextCardIndex === 1) {
             leftBtn.style.display = "none";
         } else {
-            rightBtn.style.display ="block";
-            leftBtn.style.display ="block";
+            rightBtn.style.display = "block";
+            leftBtn.style.display = "block";
         }
     }
 }
 
+
+mediaQuery.addEventListener("change", enableCarousel);
