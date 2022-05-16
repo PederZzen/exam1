@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="./js/script.js" defer></script>
     <script src="./js/contact.js" defer></script>
-    <title>Helt på Bærtur | Om meg</title>
+    <title>Helt på Bærtur | Kontakt</title>
 </head>
 <body id="contact">
     <header id="hero__contact">
@@ -23,7 +23,7 @@
                         <li><a href="./index.html">Heim</a></li>
                         <li><a href="./blog.html">Blogg</a></li>
                         <li><a href="./about.html">Om Meg</a></li>
-                        <li><a href="./contact.html">Kontakt</a></li>
+                        <li><a href="./contact.html" id="active">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
@@ -37,39 +37,45 @@
             <li class="trail">Kontakt</li>
         </ol>
 
-        <h1 id="left-aligned">Kontakt meg!</h1>
+        <section class="contact__content">
+            <div>
+                <h1 id="left-aligned">Kontakt meg!</h1>
+                <form class="contact-form" method="get">
+                    <div>
+                        <span id="nameError" class="form__error">&nbsp;</span></br>
+                        <input type="text" name="name" id="name" placeholder="Navn">
+                    </div>
+                    <div>
+                        <span id="emailError" class="form__error">&nbsp;</span></br>        
+                        <input type="text" name="email" id="email" placeholder="Epost">
+                    </div>
+                    <div>
+                        <span id="subjectError" class="form__error">&nbsp;</span></br>
+                        <input type="text" name="subject" id="subject" placeholder="Emne">
+                    </div>
+                    <div>
+                        <span id="messageError" class="form__error">&nbsp;</span></br>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Melding.."></textarea>
+                    </div> 
+                    <div>
+                        <input type="submit" value="Send">
+                    </div>
+                </form>   
+            </div>
+            <img src="./media/contact-img.jpg" alt="En mann som stirrer inn i solnedgangen" class="image-style contact__picture">
 
-        <form class="contact-form" method="get">
-            <div>
-                <span id="nameError" class="form__error">&nbsp;</span></br>
-                <input type="text" name="name" id="name" placeholder="Navn">
-            </div>
-            <div>
-                <span id="emailError" class="form__error">&nbsp;</span></br>        
-                <input type="text" name="email" id="email" placeholder="Epost">
-            </div>
-            <div>
-                <span id="subjectError" class="form__error">&nbsp;</span></br>
-                <input type="text" name="subject" id="subject" placeholder="Emne">
-            </div>
-            <div>
-                <span id="messageError" class="form__error">&nbsp;</span></br>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Melding.."></textarea>
-            </div> 
-            <div>
-                <input type="submit" value="Send">
-            </div>
-        </form>    
+        </section>
 
-        <img src="./media/contact-img.jpg" alt="En mann som stirrer inn i solnedgangen" class="image-style contact__picture">
+       
+
     </main>
 
     <footer>
         <div class="footer__nav max-width">
             <a href="./index.html"><img src="./media/logo_black.svg" id="footer__logo" alt="Logo"></a>
             <div class="social">
-                <a href=""><img src="./media/facebook.svg" alt="facebook icon"></a>
-                <a href=""><img src="./media/insta.svg" alt="instagram icon"></a>
+                <a href="https://www.facebook.com/Pederzenn/"><img src="./media/facebook.svg" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/pederzen/"><img src="./media/insta.svg" alt="instagram icon"></a>
             </div>
             <ul>
                 <li><a href="./index.html">Heim</a></li>

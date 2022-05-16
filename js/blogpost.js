@@ -17,13 +17,16 @@ fetch(detailsURL)
     const hero = document.querySelector("#hero__blog-post");
     const blogpostTrail = document.querySelector(".blogpostTrail");
 
+    let date = new Date(data.date);
+    let localDate = date.toLocaleString("default", {day: "numeric", month: "short", year: "numeric"});
+
     document.title = "Helt på Bærtur | " + data.title.rendered;
     hero.style.backgroundImage = `url(${data._embedded['wp:featuredmedia']['0'].source_url})`
     blogpostTrail.innerHTML = data.title.rendered;
 
 
     out.innerHTML += `
-    <h1 id="left-aligned">${data.title.rendered}</h1>
-    <p>${data.date}</p>
-    <p id=blogContent>${data.content.rendered}</p>`
+    <h1>${data.title.rendered}</h1>
+    <p>${localDate}</p>
+    <p>${data.content.rendered}</p>`
 }

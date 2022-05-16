@@ -40,10 +40,6 @@ let enableCarousel = () => {
     let cards = document.querySelectorAll(".carousel__card");
     let nextCardIndex = 1;
 
-    if(mediaQuery.matches) {
-        nextCardIndex = 2;
-    }
-
     function changeCard(i) {
         carousel(nextCardIndex += i);
         console.log(nextCardIndex);

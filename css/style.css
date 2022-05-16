@@ -172,16 +172,23 @@ figure {
     font-size: 0.8em;
 }
 
-li.trail{
+.trail{
     display: inline-block;
-    color: var(--textColor1);
 }
 
-li.trail a::after {
+.trail a {
+    color: rgb(167, 167, 167);
+}
+
+.trail a::after {
     display: inline-block;
     content: "|";
     font-weight: normal;
     padding: 0 1px 0 7px;
+}
+
+.trail:last-of-type {
+    color: var(--textColor1);
 }
 
 
@@ -207,7 +214,7 @@ header {
 }
 
 #hero__contact {
-    background: url(../media/pexels-sagui-andrea-618848.jpg) 40% 40%;
+    background: url(../media/contact-hero-small.jpg) 0 30%;
     background-size: cover;
 }
 
@@ -347,7 +354,7 @@ header {
 
 /* Contact */
 
-.contact-form {
+.contact__content {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -368,6 +375,12 @@ textarea {
     font-family: var(--paragraphFont);
     border-radius: 0;
     border: 1px solid gray;
+    outline: none;
+}
+
+input[type=text]:focus,
+textarea:focus {
+    border: 1.5px solid gray;
 }
 
 textarea {
@@ -379,10 +392,11 @@ input[type=submit] {
     margin-top: 20px;
     padding: 5px 15px;
     font-size: 1.1rem;
-    background-color: rgb(103, 103, 103);
+    background-color: rgb(182, 182, 182);
     color: white;
     border: none;
-    border-radius: 2px;
+    border-radius: 1px;
+    transition: background-color .3s;
 }
 
 .form__error {
@@ -432,7 +446,7 @@ footer {
 }
 
 footer * {
-    padding: 15px 0;
+    margin: 15px 0;
 }
 
 #footer__logo {
@@ -514,6 +528,7 @@ footer li {
     .max-width {
         max-width: 1000px;
         margin: 0 auto;
+        padding: 0 10px;
         position: relative;
     }
 
@@ -565,6 +580,12 @@ footer li {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    /* Blogpost */
+
+    .blogPost img{
+        max-width: 300px;
+    }
+
     /* About */
 
     #hero__about-me {
@@ -581,12 +602,33 @@ footer li {
         max-width: 600px;
     }
 
+    .about-me__content img {
+        margin-top: 50px;
+    }
+
     /* Contact */
 
     #hero__contact {
-        background: url(../media/pexels-sagui-andrea-618848.jpg) 0 75%;
+        background: url(../media/contact-hero-big.jpg) 80% 40%;
         background-size: cover;
     }
+
+    input[type=submit]:hover {
+        cursor: pointer;
+        background-color: rgb(103, 103, 103);
+    }
+
+    .contact__content {
+        display: grid;
+        grid-template-columns: 50% auto;
+        max-width: 100%;
+    }
+
+    .contact__picture {
+        align-self: center;
+        
+    }
+
 
     /* Footer */
 
