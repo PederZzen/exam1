@@ -13,7 +13,7 @@ fetch(detailsURL)
  })
  .catch(error => console.error("Error: " + error));
 
- let listDetails = (data) => {
+let listDetails = (data) => {
     const hero = document.querySelector("#hero__blog-post");
     const blogpostTrail = document.querySelector(".blogpostTrail");
 
@@ -26,7 +26,7 @@ fetch(detailsURL)
 
 
     out.innerHTML += `
-    <h1>${data.title.rendered}</h1>
+    <h1 id="left-aligned">${data.title.rendered}</h1>
     <p>${localDate}</p>
-    <p>${data.content.rendered}</p>`
+    <div id="blogContent">${data.content.rendered}</div>`
 }

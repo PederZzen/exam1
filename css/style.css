@@ -410,9 +410,9 @@ input[type=submit] {
     margin-bottom: 0;
 }
 
-.blogpost h2,
-.blogpost h3,
-.blogpost h4 {
+.blogPost h2,
+.blogPost h3,
+.blogPost h4 {
     font-weight: bold;
 }
 
@@ -421,7 +421,7 @@ input[type=submit] {
 }
 
 .blogPost ul,
-.blogpost ol {
+.blogPost ol {
     padding: 0 20px;
     line-height: 1.5rem;
 }
@@ -582,8 +582,17 @@ footer li {
 
     /* Blogpost */
 
-    .blogPost img{
-        max-width: 300px;
+    .blogPost {
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+
+    .blogPost img {
+        height: 20rem;
+    }
+
+    .blogPost h2 {
+        margin-top: 5rem;
     }
 
     /* About */
