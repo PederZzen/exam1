@@ -52,8 +52,6 @@ let listDetails = (data) => {
         image.addEventListener("click", () => {
             modalContent.innerHTML = `<img src="${image.src}" srcset="${image.srcset}" alt="${image.alt}" class="modal__img">`
             modal.style.display = "flex";
-            modalContent.style.animationName = "zoom";
-            modalContent.style.animationDuration = "0.5s";
         })
     })
 
