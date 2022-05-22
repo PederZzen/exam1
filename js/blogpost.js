@@ -8,14 +8,18 @@ const id = params.get("id");
 const detailsURL = "https://espenpedersen.no/exam1/wp-json/wp/v2/posts/" + id + "?_embed";
 const out = document.querySelector(".blogPost");
 
+
+
 fetch(detailsURL)
  .then(response => response.json())
  .then(data => {
-     console.log(data.content.rendered);
+    //  console.log(data.content.rendered);
      listDetails(data);
  })
  .catch(error => console.error("Error: " + error))
  .finally(document.getElementById("loading").style.display = "none");
+
+
 
 let listDetails = (data) => {
     document.title = "Helt på Bærtur | " + data.title.rendered;
@@ -35,16 +39,31 @@ let listDetails = (data) => {
         <p>${localDate}</p>
         <div id="blogContent">${data.content.rendered}</div>
     `
+    // Modal
 
-    const image = document.querySelectorAll(".wp-block-image");
-    console.log(image); 
+    const modal = document.querySelector(".modal__container");
+    const images = document.querySelectorAll(".blogPost img");
+    const modalContent = document.querySelector(".modal__content");
+    const body = document.querySelector("body")
 
-    var modal = document.querySelector(".modal");
-    modal.innerHTML += `<img src="${image.source_url}" alt="${image.alt_text}" class="modal-img modal-img-${blog.slug}">`;
-
-    image.addEventlistener("click", () => {
-        console.log("hello");
-        modal.style.display = "block";
+    images.forEach((image) => {
+        image.addEventListener("click", () => {
+            modalContent.innerHTML = `<img src="${image.src}" srcset="${image.srcset}" alt="${image.alt}" class="modal__img">`
+            modal.style.display = "flex";
+            body.style.overflow = "hidden";
+            console.log(modalContent);
+            console.log(image);
+        })
     })
+
+    
+    window.addEventListener("click", (e) => {
+        if (modal.style.display === "flex") {
+            if (e.target == modal) {
+                modal.style.display = "none";
+                body.style.overflow = "scroll";
+            }
+        }
+    })   
 }
 

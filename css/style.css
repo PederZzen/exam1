@@ -379,6 +379,10 @@ textarea {
     outline: none;
 }
 
+textarea {
+    padding-top: 5px;
+}
+
 input[type=text]:focus,
 textarea:focus {
     border: 1.5px solid gray;
@@ -439,27 +443,53 @@ input[type=submit] {
 
 /* Modal */
 
+.blogPost img {
+    cursor: pointer;
+    /* transition: 0.3s; */
+}
+
 .modal__container {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    align-items: center;
+    z-index: 4;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal__close {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal__content {
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+
+    animation-name: zoom;
+    animation-duration: 0.5s;
+}
+
+.modal__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes zoom {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+
+.close__modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
 /* Footer */
 
@@ -607,7 +637,7 @@ footer li {
 
     /* Blogpost */
 
-    .blogPost {
+    .post .max-width{
         max-width: 40rem;
         margin: 0 auto;
     }

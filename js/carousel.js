@@ -21,10 +21,12 @@ function listData(posts) {
         let localDate = date.toLocaleString("default", {day: "numeric", month: "short", year: "numeric"});
         // console.log(localDate);
 
+        const featuredImage = posts[i]._embedded['wp:featuredmedia']['0'];
+
         output.innerHTML += `
         <div class="carousel__card">
             <a href="./blogpost.html?id=${posts[i].id}">
-                <img src="${posts[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="${posts[i]._embedded['wp:featuredmedia']['0'].alt_text}" class="image-style">
+                <img src="${featuredImage.source_url}" alt="${featuredImage.alt_text}" class="image-style">
                 <p>${localDate}</p>
                 <h2>${posts[i].title.rendered}</h2>
             </a>
