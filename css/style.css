@@ -309,18 +309,17 @@ header {
 .carousel-button {
     background: transparent;
     border: none;
-    padding: 0;
     position: absolute;
     top: -40px;
     cursor: pointer;
 }
 
 .carousel-button__right {
-    right: 5px;
+    right: 10px;
 }
 
 .carousel-button__left {
-    right: 25px;
+    right: 30px;
 }
 
 
@@ -445,7 +444,6 @@ input[type=submit] {
 
 .blogPost img {
     cursor: pointer;
-    /* transition: 0.3s; */
 }
 
 .modal__container {
@@ -475,20 +473,18 @@ input[type=submit] {
     object-fit: cover;
 }
 
+.close__modal {
+    font-size: 3.5rem;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 10px;
+}
+
 @keyframes zoom {
     from { transform: scale(0); }
     to { transform: scale(1); }
-}
-
-
-.close__modal {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
 }
 
 /* Footer */
@@ -638,7 +634,7 @@ footer li {
     /* Blogpost */
 
     .post .max-width{
-        max-width: 40rem;
+        max-width: 50rem;
         margin: 0 auto;
     }
 

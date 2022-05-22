@@ -44,24 +44,23 @@ let listDetails = (data) => {
     const modal = document.querySelector(".modal__container");
     const images = document.querySelectorAll(".blogPost img");
     const modalContent = document.querySelector(".modal__content");
-    const body = document.querySelector("body")
+    const closeModal = document.querySelector(".close__modal");
 
     images.forEach((image) => {
         image.addEventListener("click", () => {
             modalContent.innerHTML = `<img src="${image.src}" srcset="${image.srcset}" alt="${image.alt}" class="modal__img">`
             modal.style.display = "flex";
-            body.style.overflow = "hidden";
-            console.log(modalContent);
-            console.log(image);
         })
     })
 
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    })
     
     window.addEventListener("click", (e) => {
         if (modal.style.display === "flex") {
             if (e.target == modal) {
                 modal.style.display = "none";
-                body.style.overflow = "scroll";
             }
         }
     })   
