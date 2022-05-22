@@ -442,10 +442,6 @@ input[type=submit] {
 
 /* Modal */
 
-.blogPost img {
-    cursor: pointer;
-}
-
 .modal__container {
     display: none;
     position: fixed;
@@ -459,9 +455,10 @@ input[type=submit] {
 }
 
 .modal__content {
-    width: 80%;
-    height: 90%;
+    width: 100%;
+    height: 50%;
     margin: 0 auto;
+    min-width: 300px;
 
     animation-name: zoom;
     animation-duration: 0.5s;
@@ -645,6 +642,18 @@ footer li {
     .blogPost h2 {
         margin-top: 5rem;
     }
+
+    /* Modal */
+
+    .blogPost img {
+        cursor: pointer;
+    }
+
+    .modal__content {
+        width: 80%;
+        height: 90%;
+    }
+
 
     /* About */
 

@@ -39,6 +39,8 @@ let listDetails = (data) => {
         <p>${localDate}</p>
         <div id="blogContent">${data.content.rendered}</div>
     `
+
+
     // Modal
 
     const modal = document.querySelector(".modal__container");
@@ -63,6 +65,5 @@ let listDetails = (data) => {
                 modal.style.display = "none";
             }
         }
-    })   
+    }) 
 }
-
