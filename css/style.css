@@ -343,14 +343,15 @@ header {
     display: block;
     margin: 40px auto;
     padding: 5px 10px;
-    background-color: transparent;
+    background-color: var(--accentColor);
+    font-size: 1.1rem;
     color: black;
     border: 1px solid black;
     cursor: pointer;
 }
 
 .load-more__btn:hover {
-    background-color: var(--accentColor);
+    background-color: #cecece;
 }
 
 /* Contact */

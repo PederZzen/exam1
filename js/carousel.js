@@ -25,7 +25,7 @@ function listData(posts) {
 
         output.innerHTML += `
         <div class="carousel__card">
-            <a href="./blogPost__content.html?id=${posts[i].id}">
+            <a href="./blogpost.html?id=${posts[i].id}">
                 <img src="${featuredImage.source_url}" alt="${featuredImage.alt_text}" class="image-style">
                 <p>${localDate}</p>
                 <h2>${posts[i].title.rendered}</h2>
