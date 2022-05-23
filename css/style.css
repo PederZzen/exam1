@@ -189,6 +189,7 @@ figure {
 
 #scrollUp {
     border: none;
+    background: transparent;
     position: absolute;
     margin: 0;
     right: 0;
