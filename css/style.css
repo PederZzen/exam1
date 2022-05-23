@@ -178,6 +178,7 @@ figure {
     position: absolute;
     left: 50%;
     bottom: 1rem;
+    display: block;
     transform: translateX(-50%);
     z-index: 1;
     cursor: pointer;
@@ -376,16 +377,19 @@ header {
 .load-more__btn {
     display: block;
     margin: 40px auto;
-    padding: 5px 10px;
-    background-color: var(--accentColor);
+    padding: 10px 15px;
+    background-color: #1f1f1f;
     font-size: 1.1rem;
-    color: black;
+    color: rgb(212, 212, 212);
     border: 1px solid black;
     cursor: pointer;
 }
 
 .load-more__btn:hover {
-    background-color: #cecece;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    transition: .5s;
 }
 
 /* Contact */
@@ -694,14 +698,15 @@ footer li {
     }
 
 
-    /* About */
+    /* About + Contact */
 
     #hero__about-me {
         background: url(../media/about-me-hero-big.jpg) 0 57%;
         background-size: cover;
     }
 
-    .about-me__content {
+    .about-me__content,
+    .contact__content {
         display: grid;
         grid-template-columns: 60% auto;
     }
@@ -710,11 +715,17 @@ footer li {
         max-width: 600px;
     }
 
-    .about-me__content img {
-        margin-top: 50px;
+    .about-me__content h1,
+    .contact__content h1 {
+        margin-bottom: 2rem;
     }
 
-    /* Contact */
+    .about-me__content img,
+    .contact__picture {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
     #hero__contact {
         background: url(../media/contact-hero-big.jpg) 80% 40%;
@@ -727,16 +738,8 @@ footer li {
     }
 
     .contact__content {
-        display: grid;
-        grid-template-columns: 50% auto;
         max-width: 100%;
     }
-
-    .contact__picture {
-        align-self: center;
-        
-    }
-
 
     /* Footer */
 

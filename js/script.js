@@ -28,6 +28,7 @@ function scrollFunction () {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         headerShadow.classList.add("header-shadow__scroll");
         scrollDown.style.display = "none";
+        scrollDown.classList.add("scrollDown__hide");
     } else {
         headerShadow.classList.remove("header-shadow__scroll");
         scrollDown.style.display = "block";

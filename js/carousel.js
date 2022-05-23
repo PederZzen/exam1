@@ -44,7 +44,7 @@ let enableCarousel = () => {
 
     function changeCard(i) {
         carousel(nextCardIndex += i);
-        console.log(nextCardIndex);
+        // console.log(nextCardIndex);
     }
 
     rightBtn.addEventListener("click", () => changeCard(1))
