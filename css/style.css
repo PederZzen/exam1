@@ -174,16 +174,13 @@ figure {
 #scrollDown {
     background: transparent;
     border: none;
+    padding: 5px;
     position: absolute;
     left: 50%;
-    bottom: -2rem;
+    bottom: 1rem;
     transform: translateX(-50%);
     z-index: 1;
     cursor: pointer;
-}
-
-#blogPage #scrollDown {
-    bottom: 1rem;
 }
 
 #scrollAnchor {
@@ -335,7 +332,7 @@ header {
     position: relative;
     display: flex;
     gap: 10px;
-    margin: 10px;
+    margin: 20px;
 }
 
 .carousel__card {
@@ -347,18 +344,18 @@ header {
     background: transparent;
     border: none;
     position: absolute;
-    top: -40px;
+    top: 10%;
     cursor: pointer;
+    height: 5rem;
 }
 
 .carousel-button__right {
-    right: 10px;
+    right: -10px;
 }
 
 .carousel-button__left {
-    right: 30px;
+    left: -10px;
 }
-
 
 .carousel-button img{
     height: 18px;
@@ -653,13 +650,10 @@ footer li {
         padding: 0 10px;
     }
 
-    .carousel-button__right {
-        right: 10px;
+    .carousel-button {
+        top: 15%;
     }
 
-    .carousel-button__left {
-        right: 30px;
-    }
 
     /* Blog */
 
