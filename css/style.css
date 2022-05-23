@@ -203,6 +203,7 @@ figure {
 .breadcrumbs {
     padding: 0;
     font-size: 0.8em;
+    max-width: 35%;
 }
 
 .trail{
@@ -619,6 +620,10 @@ footer li {
     /* Index */
 
     #index h1 {
+        margin-top: 70px;
+    }
+
+    h1 {
         font-size: 1.4rem;
         margin-bottom: 5rem;
     }
@@ -678,6 +683,7 @@ footer li {
     .blogPost h2 {
         margin-top: 5rem;
     }
+
 
     /* Modal */
 
