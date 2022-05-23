@@ -27,7 +27,32 @@ function scrollFunction () {
     const headerShadow = document.querySelector("#header-shadow")
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         headerShadow.classList.add("header-shadow__scroll");
+        scrollDown.style.display = "none";
     } else {
         headerShadow.classList.remove("header-shadow__scroll");
+        scrollDown.style.display = "block";
     }
 }
+
+
+// ------------------------------------------------------------------------------------
+// Scroller ned på siden
+
+const scrollDown = document.getElementById("scrollDown");
+const scrollEnd = document.querySelector("#scrollAnchor");
+
+scrollDown.addEventListener("click", () => {
+    scrollEnd.scrollIntoView({ behavior: "smooth" })
+})
+
+// ------------------------------------------------------------------------------------
+// Scroller opp på siden
+
+const scrollUp = document.querySelector("#scrollUp");
+
+scrollUp.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})

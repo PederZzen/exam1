@@ -44,6 +44,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .max-width {
     margin: 10px;
 }
@@ -112,7 +116,8 @@ figure {
 #header-shadow {
     width: 100%;
     height: 80px;
-    background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, .9));
+    background-image: linear-gradient(rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, .5) 70%, rgba(0, 0, 0, 0));
+    /* background: linear-gradient(to top, transparent, rgba(0, 0, 0, .9)); */
     transition: all .5s;
     position: fixed;
     z-index: 1;
@@ -132,12 +137,11 @@ figure {
 .top__nav a {
     color: var(--textColor3);
     margin: 10px;
+    font-size: 1.3rem;
 }
 
 .top__nav li {
-    list-style-type: none;
     margin: 40px 10px;
-    font-size: 1.3rem;
     position: relative;
 } 
 
@@ -164,6 +168,34 @@ figure {
     display: none;
     z-index: 2;
 } 
+
+/* Scroll */
+
+#scrollDown {
+    background: transparent;
+    border: none;
+    position: absolute;
+    left: 50%;
+    bottom: -2rem;
+    transform: translateX(-50%);
+    z-index: 1;
+    cursor: pointer;
+}
+
+#scrollAnchor {
+    position: absolute;
+    bottom: 80px;
+}
+
+#scrollUp {
+    border: none;
+    position: absolute;
+    margin: 0;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
 
 /* Breadcrumbs */
 
@@ -454,7 +486,7 @@ input[type=submit] {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-}
+} 
 
 .modal__content {
     width: 100%;
@@ -493,6 +525,7 @@ footer {
     padding: 40px 0;
     margin-top: 40px;
     text-align: center;
+    position: relative;
 }
 
 footer * {
@@ -509,7 +542,6 @@ footer * {
 }
 
 footer ul {
-    list-style-type: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -562,6 +594,7 @@ footer li {
     #active {
         color: rgb(205, 180, 134);
     }
+
 
     /* Hero */
 

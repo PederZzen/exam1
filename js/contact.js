@@ -86,6 +86,18 @@ let validateForm = (e) => {
         validMessage = false;
     }
 
+    // Scrolls up if form not valid
+
+    if (validName == false || 
+        validEmail == false || 
+        validSubject == false ||
+        validMessage == false) {
+            window.scrollTo({
+                top: 550,
+                behavior: "smooth"
+            });
+        }
+
     // Submits form if all inputs is valid
 
     if (validName == true && 
