@@ -289,7 +289,7 @@ header {
 /* Index */
 
 .about-me-ad {
-    background: url(../media/about-me-ad-small.jpg) right;
+    background: url(../media/about-me-ad-small.webp) right;
     background-size: cover;
     height: 60vh;
     margin-top: 100px;
@@ -645,7 +645,7 @@ footer li {
     }
 
     .about-me-ad {
-        background-image: url(../media/about-me-ad-big.jpg);
+        background-image: url(../media/about-me-ad-big.webp);
         background-position: 0 20%;
         height: 70vh;
     }
