@@ -30,5 +30,5 @@ Tekst:
 
 Brukertest:
 
-- Flyttet iconer på mobil, og endret størrelse
+- Flyttet carousel ikoner på mobil, og endret størrelse
 - ScrollDown pil ble flyttet inn i hero

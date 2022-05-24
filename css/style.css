@@ -235,7 +235,7 @@ header {
 }
 
 #hero__index {
-    background-image: url(../media/index-hero-small.jpg);
+    background-image: url(../media/index-hero-small.webp);
     background-position: bottom;
 }
 
@@ -621,7 +621,7 @@ footer li {
     }
 
     #hero__index {
-        background-image: url(../media/index-hero-big.jpg);
+        background-image: url(../media/index-hero-big.webp);
         background-position: 0 65%;
     }
 
