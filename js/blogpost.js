@@ -22,6 +22,9 @@ fetch(detailsURL)
 
 
 let listDetails = (data) => {
+
+    out.innerHTML = "";
+
     document.title = "Helt på Bærtur | " + data.title.rendered;
 
     const description = data.excerpt.rendered.replace("<p>", "").replace("</p>", "");
@@ -52,7 +55,7 @@ let listDetails = (data) => {
         image.addEventListener("click", () => {
             modalContent.innerHTML = `<img src="${image.src}" srcset="${image.srcset}" alt="${image.alt}" class="modal__img">`
             modal.style.display = "flex";
-        })
+        })  
     })
 
     closeModal.addEventListener("click", () => {
