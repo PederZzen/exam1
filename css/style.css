@@ -283,9 +283,19 @@ header {
     object-fit: cover;
 }
 
-@supports not (aspect-ratio: 16/9) { /* Fallback for old browsers*/
+.blog__card {
+    display: flex;
+    flex-direction: column;
+}
+
+@supports not (aspect-ratio: 16/9) { /* Fallback for old browsers... and Safari*/
     .thumbnail img {
         max-height: 9rem;
+    }
+
+    .blog__card img {
+        max-height: 11rem;
+        height: 100%;
     }
 }
 
@@ -384,7 +394,7 @@ header {
 }
 
 .blog__card {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .load-more__btn {
