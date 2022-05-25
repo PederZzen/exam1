@@ -22,11 +22,14 @@ function listData(posts) {
         // console.log(localDate);
 
         const featuredImage = posts[i]._embedded['wp:featuredmedia']['0'];
+        const featuredImageMedium = featuredImage.media_details.sizes.medium;
+
+        console.log(featuredImageMedium);
 
         output.innerHTML += `
         <div class="carousel__card">
             <a href="./blogpost.html?id=${posts[i].id}">
-                <img src="${featuredImage.source_url}" alt="${featuredImage.alt_text}" class="image-style">
+                <img src="${featuredImageMedium.source_url}" alt="${featuredImageMedium.alt_text}" class="image-style">
                 <p>${localDate}</p>
                 <h2>${posts[i].title.rendered}</h2>
             </a>
