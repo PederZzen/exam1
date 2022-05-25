@@ -355,8 +355,11 @@ header {
 .carousel-container {
     position: relative;
     display: flex;
-    gap: 10px;
     margin: 20px;
+}
+
+.carousel__card {
+    padding: 5px;
 }
 
 .carousel__card {
