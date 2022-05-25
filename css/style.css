@@ -162,7 +162,7 @@ figure {
 #menu-icon__close {
     position: absolute;
     width: 3rem;
-    right: 5;
+    right: 5px;
     top: 25px;
     display: none;
     z-index: 2;
