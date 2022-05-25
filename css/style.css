@@ -235,20 +235,27 @@ header {
 }
 
 #hero__index {
+    background-image: url(../media/index-hero-small.jpg); /* Fallback */
     background-image: url(../media/index-hero-small.webp);
     background-position: bottom;
 }
 
 #hero__blog {
-    background: url(../media/blog-hero-small.jpg) center;
+    background-image: url(../media/blog-hero-small.jpg); /* Fallback */
+    background-image: url(../media/blog-hero-small.webp);
+    background-position: center;
 }
 
 #hero__about-me {
-    background-image: url(../media/about-me-hero-small.jpg);
+    background-image: url(../media/about-me-hero-small.jpg); /* Fallback */
+    background-image: url(../media/about-me-hero-small.webp);
+    background-position: 0 57%;
 }
 
 #hero__contact {
-    background: url(../media/contact-hero-small.jpg) 0 30%;
+    background-image: url(../media/contact-hero-small.jpg); /* Fallback */
+    background-image: url(../media/contact-hero-small.webp);
+    background-position: 0 35%;
     background-size: cover;
 }
 
@@ -272,8 +279,14 @@ header {
 }
 
 .thumbnail img {
-    aspect-ratio: 16/9; /*Internet explorer!!*/
+    aspect-ratio: 16/9; 
     object-fit: cover;
+}
+
+@supports not (aspect-ratio: 16/9) { /* Fallback for old browsers*/
+    .thumbnail img {
+        max-height: 9rem;
+    }
 }
 
 .thumbnail p {
@@ -289,6 +302,7 @@ header {
 /* Index */
 
 .about-me-ad {
+    background: url(../media/about-me-ad-small.jpg) right;
     background: url(../media/about-me-ad-small.webp) right;
     background-size: cover;
     height: 60vh;
@@ -621,6 +635,7 @@ footer li {
     }
 
     #hero__index {
+        background-image: url(../media/index-hero-big.jpg); /* Fallback */
         background-image: url(../media/index-hero-big.webp);
         background-position: 0 65%;
     }
@@ -645,6 +660,7 @@ footer li {
     }
 
     .about-me-ad {
+        background-image: url(../media/about-me-ad-big.jpg); /* Fallback */
         background-image: url(../media/about-me-ad-big.webp);
         background-position: 0 20%;
         height: 70vh;
@@ -674,7 +690,9 @@ footer li {
     /* Blog */
 
     #hero__blog {
-        background: url(../media/blog-hero-big.jpg) 0 60%;
+        background: url(../media/blog-hero-big.jpg); /* Fallback */
+        background: url(../media/blog-hero-big.webp);
+        background-position: 0 60%;
         background-size: cover;
     }
 
@@ -733,7 +751,6 @@ footer li {
     }
 
     .post .max-width{
-        /* max-width: 50rem; */
         margin: 0 auto;
     }
 
@@ -756,7 +773,8 @@ footer li {
     /* About + Contact */
 
     #hero__about-me {
-        background: url(../media/about-me-hero-big.jpg) 0 57%;
+        background: url(../media/about-me-hero-big.jpg) 0 57%; /* Fallback */
+        background: url(../media/about-me-hero-big.webp) 0 57%;
         background-size: cover;
     }
 
@@ -784,7 +802,9 @@ footer li {
     }
 
     #hero__contact {
-        background: url(../media/contact-hero-big.jpg) 80% 40%;
+        background-image: url(../media/contact-hero-big.jpg); /* Fallback */
+        background-image: url(../media/contact-hero-big.webp);
+        background-position: 80% 40%;
         background-size: cover;
     }
 
