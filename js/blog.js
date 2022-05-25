@@ -24,7 +24,7 @@ function listData(posts) {
         // console.log(localDate);
 
         let featuredImage = posts[i]._embedded['wp:featuredmedia']['0'];
-        const featuredImageMedium = featuredImage.media_details.sizes.medium;
+        const featuredImageMedium = featuredImage.media_details.sizes.large;
 
         output.innerHTML += `
         <div class="blog__card">
