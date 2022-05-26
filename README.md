@@ -34,3 +34,5 @@ Brukertest:
 - ScrollDown pil ble flyttet inn i hero
 
 - Velger å bruke large istedenfor medium, da det gir liten forskjell på pagespeed, men mye renere utseende på selve nettsiden uten blurry bilder.
+
+- Smooth behaviour funker dessverre ikke på safari...
