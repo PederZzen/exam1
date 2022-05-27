@@ -214,11 +214,15 @@ figure {
     color: rgb(167, 167, 167);
 }
 
-.trail a::after {
+.trail::after {
     display: inline-block;
     content: "|";
     font-weight: normal;
     padding: 0 1px 0 7px;
+}
+
+.trail:last-of-type::after {
+    display: none;
 }
 
 .trail:last-of-type {
@@ -427,6 +431,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     max-width: 400px;
+    padding-right: 10px;
 }
 
 .contact__picture {
@@ -811,7 +816,7 @@ footer li {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        right: -4rem;
+        right: -3rem;
     }
 
     #hero__contact {
