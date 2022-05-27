@@ -25,7 +25,7 @@ window.onscroll = function () { scrollFunction() };
 
 function scrollFunction () {
     const headerShadow = document.querySelector("#header-shadow")
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if (document.documentElement.scrollTop > 100) {
         headerShadow.classList.add("header-shadow__scroll");
         scrollDown.style.display = "none";
     } else {
