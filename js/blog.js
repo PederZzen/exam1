@@ -2,15 +2,14 @@ let url = "https://espenpedersen.no/exam1/wp-json/wp/v2/posts?_embed";
 const output = document.querySelector(".thumbnail");
 
 function fetchData () {
-
-fetch(url)
- .then(response => response.json())
- .then(posts => {
-     listData(posts);
-     console.log(posts)
- })
- .catch(error => console.error("Error: " + error))
- .finally(document.getElementById("loading").style.display = "none");
+    fetch(url)
+    .then(response => response.json())
+    .then(posts => {
+        listData(posts);
+        console.log(posts)
+    })
+    .catch(error => console.error("Error: " + error))
+    .finally(document.getElementById("loading").style.display = "none");
 }
 
 fetchData()

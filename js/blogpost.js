@@ -43,7 +43,7 @@ let listDetails = (data) => {
         <div id="blogContent">${data.content.rendered}</div>
     `
 
-
+    // ------------------------------------------------------------------------------------
     // Modal
 
     const modal = document.querySelector(".modal__container");

@@ -62,7 +62,7 @@ ul {
     transform: translateX(-50%);
 }
 
-/* Media */
+/* ------------------------------ Media ------------------------------------- */
 
 .image-style {
     width: 100%;
@@ -86,10 +86,7 @@ figure {
     margin: 40px auto;
 }
 
-
-/* Header */
-
-/* Navigation */
+/* ------------------------------ Navigation ------------------------------------- */
 
 .top__nav {
     background-color: rgba(0, 0, 0, .85);
@@ -168,7 +165,7 @@ figure {
     z-index: 2;
 } 
 
-/* Scroll */
+/* ------------------------------ Scroll ------------------------------------- */
 
 #scrollDown {
     background: transparent;
@@ -198,8 +195,7 @@ figure {
     cursor: pointer;
 }
 
-
-/* Breadcrumbs */
+/* ------------------------------ Breadcrumbs ------------------------------------- */
 
 .breadcrumbs {
     padding: 0;
@@ -229,8 +225,7 @@ figure {
     color: var(--textColor1);
 }
 
-
-/* Hero */
+/* ------------------------------ Hero ------------------------------------- */
 
 header {
     height: 70vh;
@@ -276,7 +271,7 @@ header {
     min-width: 20rem;
 }
 
-/* Index & blog */
+/* ------------------------------ Index & Blog ------------------------------------- */
 
 .thumbnail {
     text-align: center;
@@ -292,7 +287,7 @@ header {
     flex-direction: column;
 }
 
-@supports not (aspect-ratio: 16/9) { /* Fallback for old browsers... and Safari*/
+@supports not (aspect-ratio: 16/9) { /* Fallback for old browsers... and Safari */
     .thumbnail img {
         max-height: 9rem;
     }
@@ -313,7 +308,7 @@ header {
     margin: 0;
 }
 
-/* Index */
+/* ------------------------------ Index ------------------------------------- */
 
 .about-me-ad {
     background: url(../media/about-me-ad-small.jpg) right;
@@ -348,7 +343,7 @@ header {
     left: -5px;
 }
 
-/* Carousel */
+/* ------------------------------ Carousel ------------------------------------- */
 
 .carousel {
     position: relative;
@@ -392,7 +387,7 @@ header {
     height: 18px;
 }
 
-/* Blog */
+/* ------------------------------ Blog ------------------------------------- */
 
 .thumbnail__blog {
     display: grid;
@@ -422,7 +417,7 @@ header {
     transition: .5s;
 }
 
-/* Contact */
+/* ------------------------------ Contact ------------------------------------- */
 
 .contact__content {
     display: flex;
@@ -479,7 +474,7 @@ input[type=submit] {
     color: red;
 }
 
-/* Blogpost */
+/* ------------------------------ Blogpost ------------------------------------- */
 
 .blogPost h1 {
     margin-bottom: 0;
@@ -524,7 +519,7 @@ input[type=submit] {
     margin: 0 0 2rem 0;
 }
 
-/* Modal */
+/* ------------------------------ Modal ------------------------------------- */
 
 .modal__container {
     display: none;
@@ -568,7 +563,7 @@ input[type=submit] {
     to { transform: scale(1); }
 }
 
-/* Footer */
+/* ------------------------------ Footer ------------------------------------- */
 
 footer {
     background-color: var(--accentColor);
@@ -605,12 +600,11 @@ footer li {
     margin-bottom: 20px;
 }
 
-
-/* Desktop */
+/* ------------------------------ Desktop ------------------------------------- */
 
 @media only screen and (min-width: 700px ) {
 
-    /* Navigation */
+    /* ------------------------------ Navigation ------------------------------------- */
 
     .top__nav {
         transform: translateY(0);
@@ -646,7 +640,7 @@ footer li {
     }
 
 
-    /* Hero */
+    /* ------------------------------ Hero ------------------------------------- */
 
     header {
         height: 80vh;
@@ -665,8 +659,7 @@ footer li {
         position: relative;
     }
 
-
-    /* Index */
+    /* ------------------------------ Index ------------------------------------- */
 
     #index h1 {
         margin-top: 70px;
@@ -693,7 +686,7 @@ footer li {
         max-width: 600px;
     }
 
-    /* Carousel */
+    /* ------------------------------ Carousel ------------------------------------- */
 
     .carousel {
         max-width: 800px;
@@ -704,8 +697,7 @@ footer li {
         top: 15%;
     }
 
-
-    /* Blog */
+    /* ------------------------------ Blog ------------------------------------- */
 
     #hero__blog {
         background: url(../media/blog-hero-big.jpg); /* Fallback */
@@ -718,8 +710,8 @@ footer li {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* Blogpost */
-
+    /* ------------------------------ Blogpost ------------------------------------- */
+    
     .gridContainer__post {
         display: flex; 
         gap: 100px;   
@@ -776,7 +768,7 @@ footer li {
         height: 20rem;
     }
 
-    /* Modal */
+    /* ------------------------------ Modal ------------------------------------- */
 
     .blogPost img {
         cursor: pointer;
@@ -787,8 +779,8 @@ footer li {
         height: 90%;
     }
 
+    /* ------------------------------ About & Contact ------------------------------------- */
 
-    /* About + Contact */
 
     #hero__about-me {
         background: url(../media/about-me-hero-big.jpg) 0 57%; /* Fallback */
@@ -835,7 +827,7 @@ footer li {
         max-width: 100%;
     }
 
-    /* Footer */
+    /* ------------------------------ Footer ------------------------------------- */
 
     footer ul {
         flex-direction: row;
